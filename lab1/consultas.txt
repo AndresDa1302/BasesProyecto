@@ -1,0 +1,6 @@
+SELECT band_name,band_type FROM band
+Select m_name,place_country from musician join place on born_in=place_no
+select concert_no,place_country from concert join place on concert_in=place_no
+select m_name,hola from(
+select m_name,count(instrument)as hola from musician join performer on perf_is=m_no 
+group by m_name)as b where hola>1
